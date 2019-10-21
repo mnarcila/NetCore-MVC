@@ -1,0 +1,32 @@
+﻿@page
+@model IngresarFormulario
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Formulario";
+}
+
+<div class="text-center">
+    <h1 class="display-4">FORMULARIO</h1>
+   
+   <form method="post">
+    Nombre: <input asp-for="form.Nombre" />
+    <span asp-validation-for="form.Nombre"></span>
+    <br>
+    Apellido: <input asp-for="form.Apellido" />
+    <span asp-validation-for="form.Apellido"></span>
+    <br>
+    Correo: <input asp-for="form.Correo"      />
+    <span asp-validation-for="form.Correo"></span>
+    <br>
+    Direccion: <input asp-for="form.Direccion" />
+    <span asp-validation-for="form.Direccion"></span>
+    <br>
+    Observacion: <input asp-for="form.Observacion"/>
+    <span asp-validation-for="form.Observacion"></span>
+    <br>
+
+    <input type="submit" />
+</form>
+
+
+</div>

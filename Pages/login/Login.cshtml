@@ -1,0 +1,25 @@
+﻿@page
+@model Login
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Formulario";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Iniciar Sesión</h1>
+   
+   <form method="post">
+    Usuario: <input asp-for="usuario.Nombre" />
+    <span asp-validation-for="usuario.Nombre"></span>
+    <br>
+    Contraseña: <input asp-for="usuario.Clave" />
+    <span asp-validation-for="usuario.Clave"></span>
+    <br>
+      <span asp-for="usuario.Mensaje">
+          
+      </span>
+    <input type="submit" />
+</form>
+
+
+</div>
