@@ -41,3 +41,7 @@ D:\Proyectos\netcore\obj\Debug\netcoreapp3.0\Razor\Pages\form\IngresarFormulario
 D:\Proyectos\netcore\obj\Debug\netcoreapp3.0\Razor\Pages\form\agradecimiento.cshtml.g.cs
 D:\Proyectos\netcore\obj\Debug\netcoreapp3.0\Razor\Pages\login\Login.cshtml.g.cs
 D:\Proyectos\netcore\obj\Debug\netcoreapp3.0\Razor\Pages\home\Home.cshtml.g.cs
+D:\Proyectos\netcore\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+D:\Proyectos\netcore\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Proyectos\netcore\bin\Debug\netcoreapp3.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Proyectos\netcore\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyModel.dll

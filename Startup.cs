@@ -1,10 +1,11 @@
- 
+ using System;
  using Microsoft.AspNetCore.Builder;
- using Microsoft.AspNetCore.Hosting; 
+ using Microsoft.AspNetCore.Hosting;
+ using Microsoft.AspNetCore.Mvc.Formatters;
+ using Microsoft.AspNetCore.Mvc;
  using Microsoft.Extensions.Configuration;
  using Microsoft.Extensions.DependencyInjection;
  using Microsoft.Extensions.Hosting;
- using System;
  namespace netcore {
      public class Startup {
          public Startup (IConfiguration configuration) {
@@ -25,7 +26,13 @@
                  // Make the session cookie essential
                  options.Cookie.IsEssential = true;
              });
+             services.AddMvc (options => {
+                 options.EnableEndpointRouting = false;
+                 options.RespectBrowserAcceptHeader = true;
+                 options.ReturnHttpNotAcceptable = true;
+                 options.OutputFormatters.Add (new XmlSerializerOutputFormatter ());
 
+             }).AddXmlSerializerFormatters ().SetCompatibilityVersion (CompatibilityVersion.Version_3_0);
              services.AddRazorPages ();
          }
 
@@ -44,6 +51,7 @@
 
              app.UseRouting ();
 
+             app.UseMvc ();
              app.UseAuthorization ();
              app.UseSession ();
              app.UseEndpoints (endpoints => {
