@@ -9,17 +9,23 @@
     <h1 class="display-4">Iniciar Sesión</h1>
    
    <form method="post">
-    Usuario: <input asp-for="usuario.Nombre" />
-    <span asp-validation-for="usuario.Nombre"></span>
-    <br>
-    Contraseña: <input asp-for="usuario.Clave" />
-    <span asp-validation-for="usuario.Clave"></span>
-    <br>
-      <span asp-for="usuario.Mensaje">
-          
-      </span>
+     <div>
+      <div><label>Usuario:</label></div>
+      <div> 
+        <input asp-for="usuario.Nombre" />
+        <span asp-validation-for="usuario.Nombre"></span>
+      </div>      
+     </div>
+     <div>
+      <div><label> Contraseña:</label></div>
+      <div>
+        <input type="password" asp-for="usuario.Clave" />
+        <span asp-validation-for="usuario.Clave"></span>
+      </div>
+     </div>
+   
     <input type="submit" />
 </form>
-
+ 
 
 </div>
